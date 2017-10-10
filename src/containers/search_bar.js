@@ -14,9 +14,14 @@ onInputChange(event){
   this.setState({term: event.target.value});
 };
 
+onFormSubmit(event){
+  event.preventDefault();
+  // we need to go and fetch data
+};
+
   render() {
     return(
-      <form className="input-group">
+      <form onSubmit={this.onFormSubmit} className="input-group">
         <input
           placeholder="Get a five day forcast in your favourite cities"
           className="form-control"
